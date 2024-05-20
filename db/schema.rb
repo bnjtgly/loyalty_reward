@@ -38,6 +38,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_20_110111) do
   end
 
   create_table "users", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
     t.integer "birthday_month"
     t.integer "points"
     t.string "tier"

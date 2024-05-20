@@ -5,6 +5,10 @@ class User < ApplicationRecord
   # Ensures a default value for points and tier
   after_initialize :set_defaults
 
+  def full_name
+    "#{first_name} #{last_name}"
+  end
+
   private
 
   def set_defaults
