@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  loyalty-db:
+    image: postgres
+    container_name: loyalty-db
+    volumes:
+      - postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: "loyalty_reward_development"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
+    ports:
+      - "5432:5432"
+    networks:
+      - loyalty-network
+
+  loyalty-api:
+    build: .
+    container_name: loyalty-api
+    platform: linux/x86_64  # Specify the platform as linux/x86_64
+    ports:
+      - "3000:3000"
+    depends_on:
+      - loyalty-db
+    environment:
+      DATABASE_URL: "postgres://postgres:postgres@loyalty-db:5432/loyalty_reward_development"
+    networks:
+      - loyalty-network
+
+networks:
+  loyalty-network:
+    driver: bridge
+
+volumes:
+  postgres:
