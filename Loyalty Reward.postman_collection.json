@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "afdddd5a-5ee4-4867-9d10-23a2442f74f0",
+		"name": "Loyalty Reward",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23551929"
+	},
+	"item": [
+		{
+			"name": "Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"transaction\": {\n    \"user_id\": \"ce461e1d-c140-43fa-a9d6-d71d09872902\",\n    \"amount\": 200.00,\n    \"is_foreign\": false\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show User Rewards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/da7dbb68-7c66-47d4-8014-fa777a4727fd/rewards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"da7dbb68-7c66-47d4-8014-fa777a4727fd",
+						"rewards"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/users/da7dbb68-7c66-47d4-8014-fa777a4727fd/rewards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"da7dbb68-7c66-47d4-8014-fa777a4727fd",
+								"rewards"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"2ce1953f3ef608496624e36f7249c183\""
+						},
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "x-request-id",
+							"value": "75008e9b-2b46-4540-b850-6e0d9c02caee"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.003967"
+						},
+						{
+							"key": "server-timing",
+							"value": "start_processing.action_controller;dur=0.01, sql.active_record;dur=0.45, instantiation.active_record;dur=0.16, process_action.action_controller;dur=2.30"
+						},
+						{
+							"key": "Content-Length",
+							"value": "490"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"b196fa03-9413-47cd-be29-4b4b76c199f0\",\n        \"user_id\": \"da7dbb68-7c66-47d4-8014-fa777a4727fd\",\n        \"reward_type\": \"Free Coffee\",\n        \"issue_date\": \"2024-05-23T00:00:00.000Z\",\n        \"created_at\": \"2024-05-23T10:01:52.632Z\",\n        \"updated_at\": \"2024-05-23T10:01:52.632Z\"\n    },\n    {\n        \"id\": \"b23a0948-21fc-4953-9a45-7a143a2f9ac3\",\n        \"user_id\": \"da7dbb68-7c66-47d4-8014-fa777a4727fd\",\n        \"reward_type\": \"5% Cash Rebate\",\n        \"issue_date\": \"2024-05-23T00:00:00.000Z\",\n        \"created_at\": \"2024-05-23T10:01:52.635Z\",\n        \"updated_at\": \"2024-05-23T10:01:52.635Z\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Users Rewards",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/users/b9717b62-40dd-4d1b-a2b3-130320365e41/rewards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"b9717b62-40dd-4d1b-a2b3-130320365e41",
+						"rewards"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/v1/rewards",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"rewards"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "x-frame-options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "0"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-permitted-cross-domain-policies",
+							"value": "none"
+						},
+						{
+							"key": "referrer-policy",
+							"value": "strict-origin-when-cross-origin"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "vary",
+							"value": "Accept"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"05cbdd6ee58b326d0d3cc46bfff4a6ea\""
+						},
+						{
+							"key": "cache-control",
+							"value": "max-age=0, private, must-revalidate"
+						},
+						{
+							"key": "x-request-id",
+							"value": "dc61d924-8c9f-4a05-b20e-bd6db23d5cc9"
+						},
+						{
+							"key": "x-runtime",
+							"value": "0.014568"
+						},
+						{
+							"key": "server-timing",
+							"value": "start_processing.action_controller;dur=0.01, sql.active_record;dur=0.85, instantiation.active_record;dur=0.18, process_action.action_controller;dur=12.92"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1428"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"da7dbb68-7c66-47d4-8014-fa777a4727fd\",\n        \"first_name\": \"Alice\",\n        \"last_name\": \"Smith\",\n        \"birthday_month\": 5,\n        \"points\": 0,\n        \"tier\": \"standard\",\n        \"created_at\": \"2024-05-23T10:01:52.572Z\",\n        \"updated_at\": \"2024-05-23T10:01:52.572Z\",\n        \"rewards\": [\n            {\n                \"id\": \"b196fa03-9413-47cd-be29-4b4b76c199f0\",\n                \"user_id\": \"da7dbb68-7c66-47d4-8014-fa777a4727fd\",\n                \"reward_type\": \"Free Coffee\",\n                \"issue_date\": \"2024-05-23T00:00:00.000Z\",\n                \"created_at\": \"2024-05-23T10:01:52.632Z\",\n                \"updated_at\": \"2024-05-23T10:01:52.632Z\"\n            },\n            {\n                \"id\": \"b23a0948-21fc-4953-9a45-7a143a2f9ac3\",\n                \"user_id\": \"da7dbb68-7c66-47d4-8014-fa777a4727fd\",\n                \"reward_type\": \"5% Cash Rebate\",\n                \"issue_date\": \"2024-05-23T00:00:00.000Z\",\n                \"created_at\": \"2024-05-23T10:01:52.635Z\",\n                \"updated_at\": \"2024-05-23T10:01:52.635Z\"\n            }\n        ]\n    },\n    {\n        \"id\": \"6daf8423-4292-4795-834e-ef8f0571e993\",\n        \"first_name\": \"Bob\",\n        \"last_name\": \"Johnson\",\n        \"birthday_month\": 8,\n        \"points\": 0,\n        \"tier\": \"standard\",\n        \"created_at\": \"2024-05-23T10:01:52.575Z\",\n        \"updated_at\": \"2024-05-23T10:01:52.575Z\",\n        \"rewards\": [\n            {\n                \"id\": \"e0e98d3e-5ee7-4502-946e-8ccd3618fff1\",\n                \"user_id\": \"6daf8423-4292-4795-834e-ef8f0571e993\",\n                \"reward_type\": \"Airport Lounge Access\",\n                \"issue_date\": \"2024-05-23T00:00:00.000Z\",\n                \"created_at\": \"2024-05-23T10:01:52.638Z\",\n                \"updated_at\": \"2024-05-23T10:01:52.638Z\"\n            }\n        ]\n    },\n    {\n        \"id\": \"2e32a9b4-0607-40d1-a64b-9bd7435ee37d\",\n        \"first_name\": \"Charlie\",\n        \"last_name\": \"Brown\",\n        \"birthday_month\": 12,\n        \"points\": 0,\n        \"tier\": \"standard\",\n        \"created_at\": \"2024-05-23T10:01:52.577Z\",\n        \"updated_at\": \"2024-05-23T10:01:52.577Z\",\n        \"rewards\": []\n    }\n]"
+				}
+			]
+		}
+	]
+}

@@ -12,7 +12,7 @@
     cd loyalty_reward
     ```
 
-## Setup
+## Setup via Docker
 
 1. **Build the Docker containers**
 
@@ -57,4 +57,21 @@
 3. **Run the tests inside the container.**
     ```bash
     bundle exec rspec
+    ```
+
+## Local Setup
+
+1. **Install Ruby 3.3.1**
+
+2. **Run Bundle Install**
+    ```bash
+    bundle install
+    ```
+3. **Setup Database**
+    ```bash
+    rails db:setup
+    ```
+4. **Run app**
+    ```bash
+    rails s
     ```

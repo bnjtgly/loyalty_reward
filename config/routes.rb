@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      get 'rewards/index'
       resources :transactions, only: [:create]
+      resources :rewards, only: [:index]
       resources :users, only: [] do
-        get 'rewards', to: 'rewards#index'
+        get 'rewards', to: 'rewards#show'
       end
     end
   end
